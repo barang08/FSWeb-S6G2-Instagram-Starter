@@ -6,8 +6,18 @@ const Yorumlar = props => {
   // 🔥 Bu bileşenin parentının aşağıdaki propları düzgün gönderdiğinden emin olun.
   const { yorumlar } = props;
 
+
   return (
     <div>
+
+      {
+        yorumlar.map((yorum, index) => {
+          return <Yorum key={index} yorum={yorum} />
+
+        })
+
+      }
+
       {/* her gönderi yorumları için map'le işleyerek bir Yorum bileşeni döndürün (proplarına dikkat ederek)*/}
     </div>
   );
